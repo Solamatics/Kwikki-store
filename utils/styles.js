@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     },
   },
   grow: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   main: {
     minHeight: "80vh",
@@ -28,8 +28,18 @@ const useStyles = makeStyles({
   },
   section: {
     marginTop: 10,
-    marginBottom: 10
-  }
+    marginBottom: 10,
+  },
+  headerContent: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  login: {
+    "& hover": {
+      textDecoration: "none",
+    },
+  },
 });
 
 export default useStyles;

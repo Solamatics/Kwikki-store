@@ -15,6 +15,7 @@ import useStyles from "../utils/styles";
 import NextLink from "next/link";
 import { Store } from "../utils/Store";
 import Cookies from "js-cookie";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 function Layout({ children, title, description }) {
   const { state, dispatch } = useContext(Store);
@@ -65,16 +66,18 @@ function Layout({ children, title, description }) {
               </Link>
             </NextLink>
             <div className={classes.grow}></div>
-            <div>
+            <div className={classes.headerContent}>
               <Switch
                 checked={darkMode}
                 onChange={darkModeChangeHandler}
               ></Switch>
               <NextLink href="/cart" passHref>
-                <Link>Cart</Link>
+                <Link>
+                  <ShoppingCartIcon className={classes.cart} />
+                </Link>
               </NextLink>
               <NextLink href="/login" passHref>
-                <Link>Login</Link>
+                <Link className={classes.login}>Login</Link>
               </NextLink>
             </div>
           </Toolbar>

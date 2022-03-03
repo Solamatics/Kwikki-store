@@ -89,7 +89,7 @@ export default function ProductScreen(props) {
               </ListItem>
               <ListItem>
                 <Button fullWidth variant="contained" color="primary">
-                  Add to cart
+                  Add to Cart
                 </Button>
               </ListItem>
             </List>

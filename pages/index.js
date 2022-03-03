@@ -37,7 +37,7 @@ export default function Home(props) {
               <CardActions>
                 <Typography>${product.price}</Typography>
                 <Button size="small" color="primary">
-                  Add to cart
+                  Add to Carts
                 </Button>
               </CardActions>
             </Card>
