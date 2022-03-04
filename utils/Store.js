@@ -9,6 +9,9 @@ const reducer = (state, action) => {
       return { ...state, darkMode: true };
     case "DARK_MODE_OFF":
       return { ...state, darkMode: false };
+    case "CART_ADD_ITEM": 
+      const newItem = action.payload;
+      
     default:
       return state;
   }

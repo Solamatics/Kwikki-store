@@ -73,7 +73,7 @@ function Layout({ children, title, description }) {
               ></Switch>
               <NextLink href="/cart" passHref>
                 <Link>
-                  <ShoppingCartIcon className={classes.cart} />
+                  <ShoppingCartIcon className={classes.login} />
                 </Link>
               </NextLink>
               <NextLink href="/login" passHref>

@@ -36,8 +36,9 @@ const useStyles = makeStyles({
     justifyContent: "center",
   },
   login: {
-    "& hover": {
+    "&:hover": {
       textDecoration: "none",
+      color: "#f5f5dc",
     },
   },
 });
