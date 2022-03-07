@@ -19,7 +19,7 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 function Layout({ children, title, description }) {
   const { state, dispatch } = useContext(Store);
-  const { darkMode } = state;
+  const { darkMode, cart } = state;
   const theme = createTheme({
     typography: {
       h1: {
@@ -73,7 +73,16 @@ function Layout({ children, title, description }) {
               ></Switch>
               <NextLink href="/cart" passHref>
                 <Link>
-                  <ShoppingCartIcon className={classes.login} />
+                  {cart.cartItems.length > 0 ? (
+                    <Badge
+                      color="secondary"
+                      badgeContent={cart.cartItems.length}
+                    >
+                      <ShoppingCartIcon className={classes.login} />
+                    </Badge>
+                  ) : (
+                    <ShoppingCartIcon className={classes.login} />
+                  )}
                 </Link>
               </NextLink>
               <NextLink href="/login" passHref>
